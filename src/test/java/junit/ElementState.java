@@ -1,4 +1,4 @@
-package Junit;
+package junit;
 
 
 import java.time.Duration;
