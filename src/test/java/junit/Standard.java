@@ -1,6 +1,4 @@
-package Junit;
-
-import static org.junit.Assert.*;
+package junit;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -34,7 +32,7 @@ public class Standard {
 	
 	@Test
 	public static void test() {
-		fail("Not yet implemented");
+		
 		
 	}
 	

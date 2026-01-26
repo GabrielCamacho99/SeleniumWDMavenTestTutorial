@@ -1,4 +1,4 @@
-package Junit;
+package junit;
 
 import java.time.Duration;
 
@@ -55,10 +55,10 @@ public class RadioButtonsAndCheckboxes {
 		WebElement hondaCheckBox = driver.findElement(By.id("hondacheck"));
 		hondaCheckBox.click(); System.out.println("Honda checkbx clicked");
 		
-//		Thread.sleep(2000);
-//		bmwCheckBox.click();
-//		Thread.sleep(2000);
-//		benzCheckBox.click();
+		Thread.sleep(2000);
+		bmwCheckBox.click();
+		Thread.sleep(2000);
+		benzCheckBox.click();
 		
 		System.out.println("BMW radiobtn is selected? " +  bmwRadioBtn.isSelected());
 		System.out.println("Benz radiobtn is selected? " +  benzRadioBtn.isSelected());
