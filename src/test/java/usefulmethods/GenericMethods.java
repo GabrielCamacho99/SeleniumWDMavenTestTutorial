@@ -35,12 +35,12 @@ public class GenericMethods {
 		
 		else if (type.equals("linktext")) {
 			System.out.println("Element found with linktext: " + locator);
-			return this.driver.findElement(By.cssSelector(locator));
+			return this.driver.findElement(By.linkText(locator));
 		}
 		
 		else if (type.equals("patiallinktext")) {
 			System.out.println("Element found with partial linktext: " + locator);
-			return this.driver.findElement(By.cssSelector(locator));
+			return this.driver.findElement(By.partialLinkText(locator));
 		}
 		
 		else {
