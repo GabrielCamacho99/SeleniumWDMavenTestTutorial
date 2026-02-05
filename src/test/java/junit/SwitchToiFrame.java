@@ -19,7 +19,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import usefulmethods.WaitTypes;
 
 
-public class SwitchFrame {
+public class SwitchToiFrame {
 	private WebDriver driver;
 	private String baseURL;
 	WaitTypes wt;
@@ -41,8 +41,17 @@ public class SwitchFrame {
 	
 	@Test
 	public void test() throws Exception {
-		WebElement searchBox = driver.findElement(By.id("//input[@id='search']"));
+		driver.switchTo().frame("courses-iframe");// switch to frame by id
+//		driver.switchTo().frame("iframe-name");   switch to frame by name
+//		driver.switchTo().frame(0);             switch to frame by number
+		WebElement searchBox = driver.findElement(By.xpath("//input[@id='search']"));
 		searchBox.sendKeys("python");
+		
+		driver.switchTo().defaultContent();
+		Thread.sleep(6000);
+		
+		driver.findElement(By.id("name")).sendKeys("Test successful");
+		
 	}
 	
 	

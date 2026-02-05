@@ -60,15 +60,8 @@ public class SwitchWindow {
 			if (!handle.equals(parentHandle)) {
 				driver.switchTo().window(handle);				
 				wt.clickWhenReady(By.id("search"), 5);
-				WebElement searchBox = driver.findElement(By.id("search"));
-				js.executeScript(
-					    "arguments[0].focus();" +
-					    "arguments[0].value = arguments[1];" +
-					    "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
-					    "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
-					    searchBox,
-					    "python"
-				);
+				WebElement searchBox = driver.findElement(By.id("//input[@id='search']"));
+				searchBox.sendKeys("python");
 
 				
 				
